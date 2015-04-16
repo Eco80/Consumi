@@ -9,11 +9,12 @@ Applicazione in corso di sviluppo come *tutorial* duranti i corsi **Android** de
 Licenza
 -------
 
-TODO
+GPLv2
+
 
 Note
 ----
 
 :author: Enrico Strocchi
-:version: TODO
-:license: TODO
+:version: 0.1-dev
+:license: GPLv2
