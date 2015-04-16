@@ -38,24 +38,27 @@ public class Veicolo {
 	/**
 	 * Costruttore
 	 * @param modello Modello del veicolo
+	 * @param km dal contachilometri
 	 * @param marca Marca del veicolo
 	 * @param alimentazione Carburante 1
 	 */
-	public Veicolo (String modello, String marca, Carburante alimentazione){
-		this(modello,marca,alimentazione,null);
+	public Veicolo (String modello, String marca, int km, Carburante alimentazione){
+		this(modello,marca,km,alimentazione,null);
 	}
 	
 	/**
 	 * Costruttore
 	 * @param modello Modello del veicolo
 	 * @param marca Marca del veicolo
+	 * @param km km dal contachilometri
 	 * @param alimentazione1 Carburante 1
 	 * @param alimentazione2 Carburante 2
 	 */
-	public Veicolo(String modello, String marca, Carburante alimentazione1, Carburante alimentazione2){
+	public Veicolo(String modello, String marca, int km, Carburante alimentazione1, Carburante alimentazione2){
 		this.modello = modello;
 		this.marca = marca;
 		rifornimenti = new ArrayList<Rifornimento>();
+		this.km = km;
 		this.alimentazione1 = alimentazione1;
 		this.alimentazione2 = alimentazione2;
 	}
@@ -138,6 +141,14 @@ public class Veicolo {
 		Rifornimento rif = new Rifornimento(carburante, km-this.km, quantita, costo, data);
 		rifornimenti.add(rif);
 		return true;
+	}
+	
+	/**
+	 * Ritorna i rifornimenti effettuati
+	 * @return ArrayList dei rifornimenti
+	 */
+	public ArrayList<Rifornimento> getRifornimenti(){
+		return rifornimenti;
 	}
 	
 }
