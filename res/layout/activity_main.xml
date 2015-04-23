@@ -14,8 +14,9 @@
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" >
-
+        android:layout_centerHorizontal="true" 
+        tools:listitem="@layout/rifornimenti_row">
+	
     </ListView>
 
 </RelativeLayout>
